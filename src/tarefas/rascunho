@@ -1,0 +1,63 @@
+// import { useRef, useState } from "react";
+
+// function Tarefas() {
+
+//     const [tarefas, setTarefas] = useState([]);
+
+//     const descricaoRef = useRef();
+
+//     function cadastrar () {
+//         console.log(descricaoRef.current.value);
+//         const tarefa = {
+//             id: 1,
+//             descricao: descricaoRef.current.value,
+//             finalizado: false
+//         };
+
+//         // PRIMREIRA FORMA
+//         tarefas.push(tarefa)
+//         setTarefas(tarefas.slice());
+
+//         // SEGUNDA FORMA (spread syntax - ...)
+//         // setTarefas([...tarefas, tarefa]);
+
+//         // TERCEIRA FORMA
+//         // tarefas.push(tarefa)
+//         // setTarefas([...tarefas]);
+
+//         // console.log('Cadastrado com sucessoo');
+//     };
+
+//     function atualizaTarefa (tarefa) {
+//         tarefa.finalizado=!tarefa.finalizado;
+//         setTarefas([...tarefas]);
+//     };
+
+//     return (
+//         <>
+//             <input type="text" ref={descricaoRef} />
+//             <button onClick={cadastrar}>Cadastrar</button>
+//             {
+//                 tarefas.map(tarefa => {
+//                     return (
+//                     <>
+//                         <br />
+//                         <span onClick={() => atualizaTarefa(tarefa)}>Tarefa</span>
+
+//                         <span style= {{ 
+//                             textDecoration: tarefa.finalizado === true 
+//                             ? 'line-through' 
+//                             : 'unset' 
+//                             }}>
+//                                 {tarefa.descricao}
+//                             </span>
+//                     </>
+//                     )
+//                 })
+//             }  
+//         </>
+//     );
+
+// }
+
+// export default Tarefas;
